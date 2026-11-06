@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&family=Space+Grotesk:wght@300..700&display=swap');
+
+
+@import 'tailwindcss';
+
+
+:root{
+  --font-roboto:"Roboto",sans-serif;
+  --font-grotesk:"Space Grotesk",sans-serif;
+  --font-google-sans:"Google-Sans",sans-serif;
+  --font-code: "Source Code Pro",monospace;
+  color-scheme:dark;
+}
+
+
+*{
+  scroll-behavior: smooth;
+}
+
+@theme{
+
+  --color-l-1: #FFFFFF ;
+  --color-l-2:#ADA8C3;
+  --color-l-3: #FECDE7 ;
+  --color-l-4: #FD9BCF;
+  --color-l-5: #FC69B7;
+  --color-l-6: #FB37A0 ;
+
+ 
+ 
+  --color-d-1: #FA0588 ;
+  --color-d-2: #C8046D;
+  --color-d-3: #960351;
+  --color-d-4: #640236;
+  --color-d-5: #330016;
+  --color-d-6: #24000F;
+  --color-d-7: #080004;
+  --color-d-8: #252134;
+  --color-d-9: #000000;
+
+
+  --color-stroke-1:#330016;
+
+
+  /* Typography */
+
+  --font-sans: var(--font-sora), ui-sans-serif, system-ui, sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol", "Noto Color Emoji";
+  --font-roboto: var(--font-roboto);
+  --font-code: var(--font-code);
+  --font-google-sans: var(--font-google-sans);
+
+  --tracking-tagline:.15em;
+
+
+    /* Spacing */
+
+  --spacing-0_25: 0.0625rem;
+  --spacing-7_5: 1.875rem;
+  --spacing-15: 3.75rem;
+
+    /* Opacity */
+  --opacity-15: 0.15;
+
+
+  --default-transition-duration: 200ms;
+  --default-transition-timing-function: linear;
+
+  /* Z-Index */
+  --z-1: 1;
+  --z-2: 2;
+  --z-3: 3;
+  --z-4: 4;
+  --z-5: 5;
+
+
+    /* Background Images */
+    --background-image-radial-gradient:radial-gradient(var(--tw-gradient-stops));
+    --background-image-conic-gradient:conic-gradient(from 225deg,#330016,#C8046D,#FC69B7,#FFC876, #960351,#FA0588);
+    --background-image-benefit-card-1: url('assets/benefits/card-1.svg');
+    --background-image-benefit-card-2: url('assets/benefits/card-2.svg');
+    --background-image-benefit-card-3: url('assets/benefits/card-3.svg');
+    --background-image-benefit-card-4: url('assets/benefits/card-4.svg');
+    --background-image-benefit-card-5: url('assets/benefits/card-5.svg');
+    --background-image-benefit-card-6: url('assets/benefits/card-6.svg');
+
+
+}
+
+
+
+@layer base{
+  body{
+    @apply font-sans bg-d-7 text-l-1 overflow-x-hidden
+  
+  }
+
+}
+
+@layer components{
+
+  .container {
+    @apply max-w-310 mx-auto px-5 md:px-19 lg:px-15 xl:max-w-[87.5];
+  }
+
+  .h1{
+    @apply font-semibold text-[2.5rem] leading-[3.25rem] md:text-[2.75rem] md:leading-[3.75rem] lg:text-[3.25] lg:leading-[4.0625] xl:text-[3.75rem] xl:leading-[4.5rem]
+  }
+  .h2 {
+    @apply text-[1.75rem] leading-[2.5rem] md:text-[2rem] md:leading-[2.5rem] lg:text-[2.5rem] lg:leading-[3.5rem] xl:text-[3rem] xl:leading-tight;
+  }
+  .h3 {
+    @apply text-[2rem] leading-normal md:text-[2.5rem];
+  }
+  .h4 {
+    @apply text-[2rem] leading-normal;
+  }
+  .h5 {
+    @apply text-2xl leading-normal;
+  }
+  .h6 {
+    @apply font-semibold text-lg leading-8;
+  }
+   .body-1 {
+    @apply text-[0.875rem] leading-[1.5rem] md:text-[1rem] md:leading-[1.75rem] lg:text-[1.25rem] lg:leading-8;
+  }
+  .body-2 {
+    @apply font-light text-[0.875rem] leading-6 md:text-base;
+  }
+  .caption {
+    @apply text-sm;
+  }
+  .tagline{
+    @apply font-google-sans font-light text-xs tracking-tagline uppercase
+  }
+  .qoute{
+    @apply font-google-sans text-lg leading-normal
+
+  }
+  .button {
+    @apply font-google-sans text-xs font-bold uppercase tracking-wider
+  }
+
+
+}
+
+
+@utility tap-highlight-color {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+@layer utilities {
+  .no-scrollbar {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+}
+.swiper-scrollbar,
+.swiper-scrollbar-drag {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
